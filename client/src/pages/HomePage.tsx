@@ -55,22 +55,49 @@ const HomePage = () => {
                     <Typography variant='h4'>Chevron</Typography>
                     <img src={Chevron} alt='Chevron' style={{ paddingTop: 30 }} />
                     <Typography variant='h4'>Before you begin</Typography>
-                    <Typography pt={3}>
+                    <Typography fontWeight='bold' pt={3}>
                         Following abbreviation and names are used in the text below, and should be
                         known to the reader:
                     </Typography>
-                    <Typography pt={3}>
-                        ENI hub is the Service Hub Enterprise Integration T‧AR‧D‧I‧ S is an internal
-                        product of ENI hub. The name stands for "Telekom architecture for decoupling
-                        and integration of services". It consists of infrastructure components
-                        supporting other teams in decoupling and integration of microservice-based
-                        applications. Iris-Broker is the Identity-Provider component of T‧AR‧D‧I‧S,
-                        which is currently based on Keycloak Stargate is the API -Gateway component
-                        of T‧AR‧D‧I‧S, which is currently based on Kong system- cluster is a
-                        Kubernetes cluster managed by the ENI hub, which is an important part of
-                        T‧AR‧D‧I‧S and is currently available on AWS and CaaS
+
+                    <Stack direction='row' spacing={2} pt={3}>
+                        <Typography fontWeight='bold' minWidth='80px'>
+                            ENI hub
+                        </Typography>
+                        <Typography>is the Service Hub Enterprise Integration</Typography>
+                    </Stack>
+                    <Stack direction='row' spacing={2}>
+                        <Typography fontWeight='bold' minWidth='80px'>
+                            T‧A‧R‧D‧I‧S
+                        </Typography>
+                        <Typography>
+                            is an internal product of ENI hub. The name stands for "Telekom
+                            architecture for decoupling and integration of services". It consists of
+                            infrastructure components supporting other teams in decoupling and
+                            integration of microservice-based applications.
+                        </Typography>
+                    </Stack>
+                    <Stack direction='row' spacing={2}>
+                        <Typography fontWeight='bold' minWidth='80px'>
+                            Iris-Broker
+                        </Typography>
+                        <Typography>
+                            is the Identity-Provider component of T‧AR‧D‧I‧S, which is currently
+                            based on Keycloak
+                        </Typography>
+                    </Stack>
+                    <Stack direction='row' spacing={2}>
+                        <Typography fontWeight='bold' minWidth='80px'>
+                            Stargate
+                        </Typography>
+                        <Typography>
+                            is the API-Gateway component of T‧AR‧D‧I‧S, which is currently based on
+                            Kong
+                        </Typography>
+                    </Stack>
+                    <Typography pt={3} fontWeight='bold'>
+                        Iris-Broker vs. Iris systems.
                     </Typography>
-                    <Typography pt={3}>Iris-Broker vs. Iris systems.</Typography>
                     <Typography pt={3}>
                         Chevron integrates with Iris-Broker, so in the following documentation we
                         usually mean "Iris-Broker" when we talk about Iris.
