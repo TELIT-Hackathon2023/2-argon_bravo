@@ -1,21 +1,20 @@
-import { AppBar, Box, IconButton, Link, Stack, Toolbar, Typography } from "@mui/material";
-import Chevron from "../assets/Chevron.png";
-import lang from "../assets/lang.png";
-import logo from "../assets/logo.png";
-import searchInput from "../assets/search-input.png";
-import { itemsArray, tableOfContents } from "../utils/data";
-import ai_Icons from "../assets/ai_Icon.png";
-
-
+import { AppBar, Box, IconButton, Link, Stack, Toolbar, Typography } from '@mui/material';
+import Chevron from '../assets/Chevron.png';
+import ai_Icons from '../assets/ai_Icon.png';
+import lang from '../assets/lang.png';
+import logo from '../assets/logo.png';
+import footerLogo from '../assets/footer-logo.png';
+import searchInput from '../assets/search-input.png';
+import { itemsArray, tableOfContents } from '../utils/data';
 
 const HomePage = () => {
-  return (
-    <Box padding={0} margin={0} boxSizing="border-box">
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" sx={{ background: "#000", py: 3 }}>
-          <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Stack direction="row" alignItems="center">
-              <img src={logo} alt="logo" style={{ maxWidth: "80px" }} />
+    return (
+        <Box>
+            <Box sx={{ flexGrow: 1 }}>
+                <AppBar position='static' sx={{ background: '#000', py: 3 }}>
+                    <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <Stack direction='row' alignItems='center'>
+                            <img src={logo} alt='logo' style={{ maxWidth: '80px' }} />
 
                             <Stack direction='row' spacing={4.5} pl={10}>
                                 <Link href='#' underline='none' color='inherit'>
@@ -127,6 +126,12 @@ const HomePage = () => {
                 </Box>
                 <SideBar title='Table of contents' items={tableOfContents} />
             </Box>
+            <AppBar position='static' sx={{ background: '#000', py: 3, mb: -3, mt: 4 }}>
+                <Toolbar sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <img src={footerLogo} alt='logo' style={{ position: 'absolute', left: 25 }} />
+                    <Stack>© 2023 Deutsche Telekom IT GmbH</Stack>
+                </Toolbar>
+            </AppBar>
         </Box>
     );
 };
@@ -134,19 +139,19 @@ const HomePage = () => {
 export default HomePage;
 
 interface SideBarProps {
-  title: string;
-  items: string[];
+    title: string;
+    items: string[];
 }
 
 const SideBar = ({ title, items }: SideBarProps) => {
-  return (
-    <Stack minWidth="200px">
-      <Typography variant="h6" fontWeight="bold">
-        {title}
-      </Typography>
-      {items.map((item) => (
-        <Typography key={item}>{item}</Typography>
-      ))}
-    </Stack>
-  );
+    return (
+        <Stack minWidth='200px'>
+            <Typography variant='h6' fontWeight='bold'>
+                {title}
+            </Typography>
+            {items.map((item) => (
+                <Typography key={item}>{item}</Typography>
+            ))}
+        </Stack>
+    );
 };
