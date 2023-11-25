@@ -1,10 +1,11 @@
-import { Box, AppBar, Toolbar, Link, Stack, Typography, IconButton } from "@mui/material";
+import { AppBar, Box, IconButton, Link, Stack, Toolbar, Typography } from "@mui/material";
+import Chevron from "../assets/Chevron.png";
+import lang from "../assets/lang.png";
 import logo from "../assets/logo.png";
 import searchInput from "../assets/search-input.png";
-import lang from "../assets/lang.png";
-import Chevron from "../assets/Chevron.png";
 import { itemsArray, tableOfContents } from "../utils/data";
 import ai_Icons from "../assets/ai_Icon.png";
+
 
 
 const HomePage = () => {
@@ -42,6 +43,17 @@ const HomePage = () => {
                         </Stack>
                         <Stack direction='row' gap={4}>
                             <img src={searchInput} alt='search' />
+                            <IconButton
+                                onClick={() => alert('clicked')}
+                                sx={{
+                                    borderRadius: '12px',
+                                    border: '1px solid #1F222E',
+                                    p: '7px',
+                                    background: '#0F1112',
+                                }}
+                            >
+                                <img src={ai_Icons} alt='search' />
+                            </IconButton>
                             <img
                                 src={lang}
                                 alt='search'
