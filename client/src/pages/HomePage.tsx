@@ -1,8 +1,8 @@
 import { Box, AppBar, Toolbar, Link, Stack, Typography } from '@mui/material';
-import logo from '../../public/logo.png';
-import searchInput from '../../public/search-input.png';
-import lang from '../../public/lang.png';
-import Chevron from '../../public/Chevron.png';
+import logo from '../assets/logo.png';
+import searchInput from '../assets/search-input.png';
+import lang from '../assets/lang.png';
+import Chevron from '../assets/Chevron.png';
 import { itemsArray, tableOfContents } from '../utils/data';
 
 const HomePage = () => {
@@ -100,7 +100,9 @@ interface SideBarProps {
 const SideBar = ({ title, items }: SideBarProps) => {
     return (
         <Stack minWidth='200px'>
-            <Typography variant='h6'>{title}</Typography>
+            <Typography variant='h6' fontWeight='bold'>
+                {title}
+            </Typography>
             {items.map((item) => (
                 <Typography key={item}>{item}</Typography>
             ))}
