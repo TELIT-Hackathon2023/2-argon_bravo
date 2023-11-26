@@ -7,3 +7,7 @@ providing users with the convenience and speed of information exchange. The core
 which analyzes all customer project documentation and answers users' questions, <br />
 providing them with informative answers. <br />
 Interaction with the language model takes place through a convenient pop-up window that is localized directly on the company's website to ensure maximum accessibility and efficiency of interaction for users.
+
+
+### Front-end part
+![Our project](client/src/assets/Screenshot.png)
