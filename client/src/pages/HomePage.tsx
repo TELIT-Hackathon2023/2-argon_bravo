@@ -238,6 +238,50 @@ const BasicPopover = ({
         {
             user: "user",
             message: "Hello, I am user. How can I help you?"
+        },
+        {
+            user: "chat",
+            message: "Hello, I am T-Bot. How can I help you?"
+        },
+        {
+            user: "user",
+            message: "Hello, I am user. How can I help you?"
+        }
+        , {
+            user: "chat",
+            message: "Hello, I am T-Bot. How can I help you?"
+        },
+        {
+            user: "user",
+            message: "Hello, I am user. How can I help you?"
+        }
+        , {
+            user: "chat",
+            message: "Hello, I am T-Bot. How can I help you?"
+        },
+        {
+            user: "user",
+            message: "Hello, I am user. How can I help you?"
+        },
+        {
+            user: "user",
+            message: "Hello, I am user. How can I help you?"
+        }
+        , {
+            user: "chat",
+            message: "Hello, I am T-Bot. How can I help you?"
+        },
+        {
+            user: "user",
+            message: "Hello, I am user. How can I help you?"
+        }
+        , {
+            user: "chat",
+            message: "Hello, I am T-Bot. How can I help you?"
+        },
+        {
+            user: "user",
+            message: "Hello, I am user. How can I help you?"
         }
     ]
   );
@@ -441,7 +485,6 @@ function Message({
         <Typography
           sx={{
             color: "#515B6A",
-            fontFamily: "TeleGrotesk Next",
             fontSize: "14px",
             fontStyle: "normal",
             fontWeight: "700",
@@ -452,7 +495,6 @@ function Message({
         <Typography
           sx={{
             color: "#718096",
-            fontFamily: "TeleGrotesk Next",
             fontSize: "14px",
             fontStyle: "normal",
             fontWeight: "500",
@@ -486,7 +528,6 @@ function Message({
           <Typography
             sx={{
               color: "#515B6A",
-              fontFamily: "TeleGrotesk Next",
               fontSize: "14px",
               fontStyle: "normal",
               fontWeight: "700",
@@ -497,7 +538,6 @@ function Message({
           <Typography
             sx={{
               color: "#718096",
-              fontFamily: "TeleGrotesk Next",
               fontSize: "14px",
               fontStyle: "normal",
               fontWeight: "500",
