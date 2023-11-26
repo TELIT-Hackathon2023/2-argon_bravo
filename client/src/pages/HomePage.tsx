@@ -1,31 +1,31 @@
 import {
-  AppBar,
-  Box,
-  IconButton,
-  Link,
-  MenuItem,
-  Popover,
-  Select,
-  Stack,
-  SvgIcon,
-  TextField,
-  Toolbar,
-  Typography,
-  styled,
+    AppBar,
+    Box,
+    IconButton,
+    Link,
+    MenuItem,
+    Popover,
+    Select,
+    Stack,
+    SvgIcon,
+    TextField,
+    Toolbar,
+    Typography,
+    styled,
 } from "@mui/material";
 import { useState } from "react";
 import Chevron from "../assets/Chevron.png";
+import Tlogo from "../assets/Tlogo.png";
 import ai_Icons from "../assets/ai_Icon.png";
 import footerLogo from "../assets/footer-logo.png";
+import g_translate from "../assets/g_translate.png";
 import lang from "../assets/lang.png";
+import Launch from "../assets/launch.png";
 import logo from "../assets/logo.png";
+import replay from "../assets/replay.png";
 import searchInput from "../assets/search-input.png";
 import telekom from "../assets/telekom.png";
 import { itemsArray, tableOfContents } from "../utils/data";
-import Tlogo from "../assets/Tlogo.png";
-import Launch from "../assets/launch.png";
-import g_translate from "../assets/g_translate.png";
-import replay from "../assets/replay.png";
 
 const HomePage = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -219,8 +219,14 @@ const BasicPopover = ({
   const [isEmpty, setIsEmpty] = useState<boolean>(true);
   const [inputContent, setInputContent] = useState<string>("");
 
-  function handleRequest(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+  async function handleRequest() {
     setIsEmpty(false);
+    setInputContent("");
+    const data = await fetch(`localhost:3000/${inputContent}`, {
+        method: "Get",
+    })
+    const response = await data.json();
+    setMessages([...messages, { user: "chat", message: response.message }]);
   }
 
   const [messages, setMessages] = useState<{ user: string; message: string }[]>(
@@ -354,8 +360,8 @@ const BasicPopover = ({
                 sx: { borderRadius: "40px" },
                 endAdornment: (
                   <IconButton
-                    onClick={(e) => {
-                      handleRequest(e);
+                    onClick={() => {
+                      handleRequest();
                     }}
                   >
                     <SendIcon />
